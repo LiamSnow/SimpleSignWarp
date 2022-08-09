@@ -7,9 +7,29 @@ website: https://liamsnow.com
 depend: []
 softdepend: []
 commands:
+  warp-reload:
+    description: Reloads config & data for SimpleWarp
+    usage: /<command>
+    aliased: [ ]
+    default: op
   warp-set-location:
     description: Sets the location for a warp
     usage: /<command>
     aliased: []
     default: op
-  warp-
+  warp-list:
+    description: List all warps
+    usage: /<command>
+    aliased: []
+    default: op
+  warp-delete:
+    description: Deletes a warp
+    usage: /<command>
+    aliased: [ ]
+    default: op
+  warp-get-sign:
+    description: Gives you a sign that lets players use the warp
+    usage: /<command>
+    aliased: [ ]
+    default: op
+

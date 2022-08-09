@@ -9,14 +9,7 @@ public class Constants {
 
 	public static String DATA_FILE_NAME = "data.yml";
 
-	public static Material HOME_SIGN_MATERIAL = Material.OAK_SIGN;
-	public static Material WARP_HOME_SIGN_MATERIAL = Material.OAK_SIGN;
-	public static Material REPLACE_OLD_HOME_MATERIAL = Material.AIR;
+	public static Material WARP_SIGN_MATERIAL = Material.OAK_SIGN;
 
-	public static String PERSISTENT_DATA_TAG_KEY = "simplewarp-tag";
-	public static String PERSISTENT_DATA_UUID_KEY = "simplewarp-uuid";
-	public static int TAG_SIGN_WARP_SPAWN = 34;
-	public static int TAG_SIGN_WARP_HOME_UNCLAIMED = 5104;
-	public static int TAG_SIGN_WARP_HOME_CLAIMED = 254;
-
+	public static String PERSISTENT_DATA_WARP_KEY = "simplewarp-tag";
 }
