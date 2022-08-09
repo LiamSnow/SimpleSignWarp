@@ -1,5 +1,5 @@
 # SimpleWarp
-A simple sign sethome/warping system for connecting an SMP world.
+A simple spigot plugin that allows admins to create sign warps between locations.
 
 ## Description
 
