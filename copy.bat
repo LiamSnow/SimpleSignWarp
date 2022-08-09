@@ -1,1 +1,1 @@
-copy C:\Users\liams\Documents\GitHub\SimpleWarp\target\SimpleWarp-1.0.jar C:\Users\liams\Desktop\server\plugins\SimpleWarp-1.0.jar /b/v/y
+copy C:\Users\liams\Documents\GitHub\SimpleSignWarp\target\SimpleSignWarp-1.0.jar C:\Users\liams\Desktop\server\plugins\SimpleSignWarp-1.0.jar /b/v/y

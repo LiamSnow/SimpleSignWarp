@@ -1,6 +1,6 @@
-name: SimpleWarp
+name: SimpleSignWarp
 version: '${project.version}'
-main: me.liamsnow.simplewarp.SimpleWarp
+main: me.liamsnow.simplesignwarp.SimpleSignWarp
 api-version: 1.19
 authors: [ LiamSnow ]
 website: https://liamsnow.com
@@ -8,7 +8,7 @@ depend: []
 softdepend: []
 commands:
   warp-reload:
-    description: Reloads config & data for SimpleWarp
+    description: Reloads config & data for SimpleSignWarp
     usage: /<command>
     aliased: [ ]
     default: op

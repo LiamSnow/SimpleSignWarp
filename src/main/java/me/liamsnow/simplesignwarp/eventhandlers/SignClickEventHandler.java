@@ -1,9 +1,9 @@
-package me.liamsnow.simplewarp.eventhandlers;
+package me.liamsnow.simplesignwarp.eventhandlers;
 
-import me.liamsnow.simplewarp.Constants;
-import me.liamsnow.simplewarp.SimpleWarp;
-import me.liamsnow.simplewarp.Util;
-import me.liamsnow.simplewarp.filehandlers.DataFileHandler;
+import me.liamsnow.simplesignwarp.Constants;
+import me.liamsnow.simplesignwarp.SimpleSignWarp;
+import me.liamsnow.simplesignwarp.Util;
+import me.liamsnow.simplesignwarp.filehandlers.DataFileHandler;
 import org.bukkit.ChatColor;
 import org.bukkit.Location;
 import org.bukkit.NamespacedKey;
@@ -36,7 +36,7 @@ public class SignClickEventHandler implements Listener {
 
 		//Check if Warp
 		PersistentDataContainer signPersistentData = sign.getPersistentDataContainer();
-		String warpName = signPersistentData.getOrDefault(new NamespacedKey(SimpleWarp.instance, Constants.PERSISTENT_DATA_WARP_KEY), PersistentDataType.STRING, null);
+		String warpName = signPersistentData.getOrDefault(new NamespacedKey(SimpleSignWarp.instance, Constants.PERSISTENT_DATA_WARP_KEY), PersistentDataType.STRING, null);
 
 		//Warp
 		if (warpName != null) {
@@ -44,7 +44,7 @@ public class SignClickEventHandler implements Listener {
 
 			if (warpLocation == null) {
 				player.sendMessage(ChatColor.RED + "" + ChatColor.BOLD + "Invalid Warp");
-				SimpleWarp.instance.getLogger().warning("Error: Invalid SimpleWarp Warp");
+				SimpleSignWarp.instance.getLogger().warning("Error: Invalid SimpleSignWarp Warp");
 			}
 			else {
 				Util.warp(player, warpLocation, warpName + "!");

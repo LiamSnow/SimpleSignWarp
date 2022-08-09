@@ -1,14 +1,14 @@
-package me.liamsnow.simplewarp.filehandlers;
+package me.liamsnow.simplesignwarp.filehandlers;
 
-import me.liamsnow.simplewarp.SimpleWarp;
+import me.liamsnow.simplesignwarp.SimpleSignWarp;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.configuration.file.YamlConfiguration;
 
 import java.io.File;
 import java.io.IOException;
 
-import static me.liamsnow.simplewarp.Constants.CONFIG_FILE_NAME;
-import static me.liamsnow.simplewarp.Constants.FORCE_OVERWRITE_CONFIG_FILE;
+import static me.liamsnow.simplesignwarp.Constants.CONFIG_FILE_NAME;
+import static me.liamsnow.simplesignwarp.Constants.FORCE_OVERWRITE_CONFIG_FILE;
 
 public class ConfigFileHandler {
 
@@ -19,7 +19,7 @@ public class ConfigFileHandler {
 	}
 
 	public static void load() {
-		file = new File(SimpleWarp.instance.getDataFolder(), CONFIG_FILE_NAME);
+		file = new File(SimpleSignWarp.instance.getDataFolder(), CONFIG_FILE_NAME);
 		boolean fileExists = file.exists();
 
 		//Make Folder for Config File
@@ -29,7 +29,7 @@ public class ConfigFileHandler {
 
 		//Create Config File (& Overwrite if Asked)
 		if (FORCE_OVERWRITE_CONFIG_FILE || !fileExists) {
-			SimpleWarp.instance.saveResource(CONFIG_FILE_NAME, FORCE_OVERWRITE_CONFIG_FILE);
+			SimpleSignWarp.instance.saveResource(CONFIG_FILE_NAME, FORCE_OVERWRITE_CONFIG_FILE);
 		}
 
 		config = YamlConfiguration.loadConfiguration(file);
@@ -39,7 +39,7 @@ public class ConfigFileHandler {
 		try {
 			config.save(file);
 		} catch (IOException e) {
-			SimpleWarp.instance.getLogger().severe(e.getMessage());
+			SimpleSignWarp.instance.getLogger().severe(e.getMessage());
 			throw new RuntimeException(e);
 		}
 	}

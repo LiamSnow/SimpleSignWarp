@@ -1,7 +1,7 @@
-package me.liamsnow.simplewarp.filehandlers;
+package me.liamsnow.simplesignwarp.filehandlers;
 
-import me.liamsnow.simplewarp.SimpleWarp;
-import me.liamsnow.simplewarp.Util;
+import me.liamsnow.simplesignwarp.SimpleSignWarp;
+import me.liamsnow.simplesignwarp.Util;
 import org.bukkit.Location;
 import org.bukkit.World;
 import org.bukkit.configuration.file.FileConfiguration;
@@ -11,7 +11,7 @@ import java.io.File;
 import java.io.IOException;
 import java.util.*;
 
-import static me.liamsnow.simplewarp.Constants.DATA_FILE_NAME;
+import static me.liamsnow.simplesignwarp.Constants.DATA_FILE_NAME;
 
 public class DataFileHandler {
 
@@ -23,12 +23,12 @@ public class DataFileHandler {
 	}
 
 	public static void load() {
-		file = new File(SimpleWarp.instance.getDataFolder(), DATA_FILE_NAME);
+		file = new File(SimpleSignWarp.instance.getDataFolder(), DATA_FILE_NAME);
 
 		//Make Folder for Config File
 		if (!file.exists()) {
 			file.getParentFile().mkdirs();
-			SimpleWarp.instance.saveResource(DATA_FILE_NAME, false);
+			SimpleSignWarp.instance.saveResource(DATA_FILE_NAME, false);
 		}
 
 		data = YamlConfiguration.loadConfiguration(file);
@@ -38,7 +38,7 @@ public class DataFileHandler {
 		try {
 			data.save(file);
 		} catch (IOException e) {
-			SimpleWarp.instance.getLogger().severe(e.getMessage());
+			SimpleSignWarp.instance.getLogger().severe(e.getMessage());
 			throw new RuntimeException(e);
 		}
 	}
@@ -47,7 +47,7 @@ public class DataFileHandler {
 		String worldUUIDString = data.getString(key + ".world", null);
 		if (worldUUIDString == null) return null;
 		UUID worldUUID = UUID.fromString(worldUUIDString);
-		World world = SimpleWarp.instance.getServer().getWorld(worldUUID);
+		World world = SimpleSignWarp.instance.getServer().getWorld(worldUUID);
 
 		double x = data.getDouble(key + ".x", Double.MAX_VALUE);
 		double y = data.getDouble(key + ".y", Double.MAX_VALUE);

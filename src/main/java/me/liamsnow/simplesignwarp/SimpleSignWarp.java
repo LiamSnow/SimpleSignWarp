@@ -1,13 +1,13 @@
-package me.liamsnow.simplewarp;
+package me.liamsnow.simplesignwarp;
 
-import me.liamsnow.simplewarp.commands.*;
-import me.liamsnow.simplewarp.eventhandlers.SignClickEventHandler;
-import me.liamsnow.simplewarp.filehandlers.ConfigFileHandler;
-import me.liamsnow.simplewarp.filehandlers.DataFileHandler;
+import me.liamsnow.simplesignwarp.commands.*;
+import me.liamsnow.simplesignwarp.eventhandlers.SignClickEventHandler;
+import me.liamsnow.simplesignwarp.filehandlers.ConfigFileHandler;
+import me.liamsnow.simplesignwarp.filehandlers.DataFileHandler;
 import org.bukkit.plugin.java.JavaPlugin;
 
-public final class SimpleWarp extends JavaPlugin {
-	public static SimpleWarp instance;
+public final class SimpleSignWarp extends JavaPlugin {
+	public static SimpleSignWarp instance;
 
 	@Override
 	public void onEnable() {
@@ -31,7 +31,7 @@ public final class SimpleWarp extends JavaPlugin {
 		getServer().getPluginManager().registerEvents(new SignClickEventHandler(), this);
 
 		//Log
-		getLogger().info("Enabled SimpleWarp!");
+		getLogger().info("Enabled SimpleSignWarp!");
 	}
 
 	@Override

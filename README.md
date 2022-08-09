@@ -1,4 +1,4 @@
-# SimpleWarp
+# SimpleSignWarp
 A simple spigot plugin that allows admins to create sign warps between locations.
 
 ## Description

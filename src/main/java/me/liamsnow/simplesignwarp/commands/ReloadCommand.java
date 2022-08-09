@@ -1,7 +1,7 @@
-package me.liamsnow.simplewarp.commands;
+package me.liamsnow.simplesignwarp.commands;
 
-import me.liamsnow.simplewarp.filehandlers.ConfigFileHandler;
-import me.liamsnow.simplewarp.filehandlers.DataFileHandler;
+import me.liamsnow.simplesignwarp.filehandlers.ConfigFileHandler;
+import me.liamsnow.simplesignwarp.filehandlers.DataFileHandler;
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
@@ -15,7 +15,7 @@ public class ReloadCommand implements CommandExecutor {
 		ConfigFileHandler.load();
 		DataFileHandler.load();
 
-		sender.sendMessage(ChatColor.YELLOW + "Reloaded SimpleWarp Config & Data!");
+		sender.sendMessage(ChatColor.YELLOW + "Reloaded SimpleSignWarp Config & Data!");
 
 		return true;
 	}

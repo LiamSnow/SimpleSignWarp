@@ -1,6 +1,6 @@
-package me.liamsnow.simplewarp.commands;
+package me.liamsnow.simplesignwarp.commands;
 
-import me.liamsnow.simplewarp.filehandlers.DataFileHandler;
+import me.liamsnow.simplesignwarp.filehandlers.DataFileHandler;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.command.TabCompleter;

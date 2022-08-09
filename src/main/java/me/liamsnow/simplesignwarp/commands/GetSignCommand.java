@@ -1,7 +1,7 @@
-package me.liamsnow.simplewarp.commands;
+package me.liamsnow.simplesignwarp.commands;
 
-import me.liamsnow.simplewarp.Constants;
-import me.liamsnow.simplewarp.SimpleWarp;
+import me.liamsnow.simplesignwarp.Constants;
+import me.liamsnow.simplesignwarp.SimpleSignWarp;
 import org.bukkit.ChatColor;
 import org.bukkit.NamespacedKey;
 import org.bukkit.block.Sign;
@@ -42,7 +42,7 @@ public class GetSignCommand implements CommandExecutor {
 
 		//Tag Sign with Warp Name
 		PersistentDataContainer signPersistentData = signBlockState.getPersistentDataContainer();
-		signPersistentData.set(new NamespacedKey(SimpleWarp.instance, Constants.PERSISTENT_DATA_WARP_KEY), PersistentDataType.STRING, warpName);
+		signPersistentData.set(new NamespacedKey(SimpleSignWarp.instance, Constants.PERSISTENT_DATA_WARP_KEY), PersistentDataType.STRING, warpName);
 
 		//Edit Sign Text
 		signBlockState.setLine(1, ChatColor.GREEN + "" + ChatColor.BOLD + "[Warp]");

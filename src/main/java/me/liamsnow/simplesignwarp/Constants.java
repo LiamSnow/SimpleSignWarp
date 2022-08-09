@@ -1,4 +1,4 @@
-package me.liamsnow.simplewarp;
+package me.liamsnow.simplesignwarp;
 
 import org.bukkit.Material;
 
@@ -11,5 +11,5 @@ public class Constants {
 
 	public static Material WARP_SIGN_MATERIAL = Material.OAK_SIGN;
 
-	public static String PERSISTENT_DATA_WARP_KEY = "simplewarp-tag";
+	public static String PERSISTENT_DATA_WARP_KEY = "simplesignwarp-tag";
 }

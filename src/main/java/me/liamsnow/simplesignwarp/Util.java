@@ -1,4 +1,4 @@
-package me.liamsnow.simplewarp;
+package me.liamsnow.simplesignwarp;
 
 import org.bukkit.*;
 import org.bukkit.entity.Player;
